@@ -15,3 +15,15 @@ function sides(literals, ...expressions) {
 
 const [x, y] = sides`The area is: ${s1 * s2}.\nThe perimeter is: ${2 * (s1 + s2)}.`;
 ```
+
+# DayOfWeek's name
+
+## Source
+
+[hackerrank]()
+
+## Dafuk
+
+```js
+let dayName = new Date(dateString).toLocaleString('en-us', { weekday:'long' })
+```
