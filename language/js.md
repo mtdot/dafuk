@@ -37,8 +37,8 @@ let dayName = new Date(dateString).toLocaleString('en-us', { weekday:'long' })
 ```js
 // declare state
 const [data, setData] = useState({
-  'title': 'abcxyz',
-  'value': '123456'
+  title: 'abcxyz',
+  value: '123456'
 });
 
 // updating state
