@@ -37,14 +37,14 @@ let dayName = new Date(dateString).toLocaleString('en-us', { weekday:'long' })
 ```js
 // declare state
 const [data, setData] = useState({
-  title: 'abcxyz',
-  value: '123456'
+  title: 'counter',
+  value: '1'
 });
 
 // updating state
-const titleChangedHandler = (event) => {
+const valueChangedHandler = (event) => {
   setData((prevState) => {
-    return {...prevState, title: event.target.value}
+    return {...prevState, value: prevState.value + event.target.value}
   });
 }
 ```
