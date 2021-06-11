@@ -62,3 +62,17 @@ if (+enteredValue > 0) {
   // ...
 }
 ```
+
+# ReactJS useEffect's clean-up function doesn't just run once
+
+## Source
+
+> Additionally, if a component renders multiple times (as they typically do), 
+> the previous effect is cleaned up before executing the next effect
+
+## Dafuk
+
+First Run   : `Render` > `Effect` > (Preparing Cleanup Function)
+
+Second Run  : `Render` > `Cleanup` (from previous Effect) > `Effect` > (Preparing New Cleanup Function)
+
