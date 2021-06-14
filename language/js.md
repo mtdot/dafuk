@@ -76,3 +76,23 @@ First Run   : `Render` > `Effect` > (Preparing Cleanup Function)
 
 Second Run  : `Render` > `Cleanup` (from previous Effect) > `Effect` > (Preparing New Cleanup Function)
 
+
+# js destructuring with assignment alias
+
+## Source
+
+[Udemy - ReactJS](https://samsungu.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25599236#overview)
+
+## Dafuk
+
+```js
+const state = {
+  isValid: true,
+  name: 'abcxyz'
+}
+
+const { isValid: isNameValid } = state; // unpacking property 'isValid' of 'state' object, then assign as variable with name 'isNameValid'
+
+```
+
+
