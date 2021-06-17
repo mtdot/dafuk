@@ -95,4 +95,21 @@ const { isValid: isNameValid } = state; // unpacking property 'isValid' of 'stat
 
 ```
 
+# js bind() method
+
+## Source
+
+[javascripttutorial](https://www.javascripttutorial.net/javascript-bind/)
+
+## Dafuk
+
+```js
+const sum = (a, b) => a + b
+
+// the original way
+sum(1, 2) // expected output '3'
+
+// the 'bind' way
+sum.bind(null, 1)(2) // same output as original way
+```
 
