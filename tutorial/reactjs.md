@@ -20,6 +20,10 @@
 
 ## 243. Working with Multiple Slices
 
+## 245. Splitting Our Code
+ - Separating slices
+ - Exporting reducer & reducer actions
+
 ## 254. Where To Put Our Logic
  - Where to put async/sync code?
  - [CODE](https://github.com/academind/react-complete-guide-code/tree/19-advanced-redux/code/zz-suboptimal-example-code)
