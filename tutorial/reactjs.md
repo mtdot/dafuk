@@ -44,6 +44,9 @@
 
 ## 268. Working with Links
  - Link
+ - Link vs Route
+ 
+ > `Link` component is responsible for the transition (including registerring & transitioning) from state to state (page to page), while the `Route` component is responsible to act as a switch to display (serving) certain components based on route state.
 
 ## 269. Using NavLinks
  - Link vs NavLink
@@ -54,3 +57,6 @@
  <Link to="/">Home</Link>
  <NavLink to="/" activeClassName="active">Home</NavLink>
  ```
+
+## 270. Adding Dynamic Routes with Params
+ - 
