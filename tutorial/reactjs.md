@@ -67,3 +67,44 @@
 
 ## 271. Extracting Route Params
  - useParams() hook
+
+## 272. Using "Switch" and "exact" For Configuring Routes
+ - `Switch`: map & serve first url fit with `Route`
+ - `Switch` without `exact`: map using startsWith
+ - `Switch` with `exact`: map using exact same url
+
+## 273. Working with Nested Routes
+ - Understanding concept of Nested Route & how it evaluated - ? Confusing ...
+ - useRouteMatch() hook
+ ```
+ let { path, url } = useRouteMatch();
+ ```
+ > Consider the route `/users/:userId`. `match.path` would be `/users/:userId` while `match.url` would have the `:userId` value filled in, e.g. `users/5`.
+
+## 274. Redirecting The User
+ - `Redirect` component: Automatically redirect to specific url when accessing specified url
+
+## 281. Adding a "Not Found" Page
+
+```jsx
+<Switch>
+    <Route path="..."> ... </Route>
+    // ... apps routes
+    <Route path="*"> // fallback route 
+        <NotFound />
+    </Route>
+</Switch>
+```
+
+## 282. Implementing Programmatic (Imperative) Navigation
+ - useHistory() hook
+ - Different between history.push() & history.replace(): `push` can go back with BACK button of browser, `replace` cannot
+
+## 283. Preventing Possibly Unwanted Route Transitions with the "Prompt" Component
+ - `Prompt` component. Making confirmation when leaving editting form. 
+
+## 284. Working with Query Parameters
+ - `useLocation()` hook
+ - `location.search`
+ - `URLSearchParams` class
+ - `queryParams.get()` to access queries.
