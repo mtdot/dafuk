@@ -5,6 +5,12 @@
 
 ## 232. Providing the Store
 
+## 233. Using Redux Data in React Components
+ - useSeletor() hook
+
+## 234. Dispatching Actions From Inside Components
+ - useDispatch() hook
+
 ## 242. Migrating Everything To Redux Toolkit
 
 ## 243. Working with Multiple Slices
