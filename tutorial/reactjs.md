@@ -37,3 +37,20 @@
 
 ## 263. Module Resources
  - [CODE](https://github.com/academind/react-complete-guide-code/tree/19-advanced-redux)
+
+## 267. Defining & Using Routes
+ - Route
+ - BrowserRouter
+
+## 268. Working with Links
+ - Link
+
+## 269. Using NavLinks
+ - Link vs NavLink
+ > `NavLink`: A special version of the `Link` that will add styling attributes to the rendered element when it matches the current URL.
+ 
+ - Sample Code
+ ```jsx
+ <Link to="/">Home</Link>
+ <NavLink to="/" activeClassName="active">Home</NavLink>
+ ```
