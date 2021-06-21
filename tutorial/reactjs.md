@@ -6,3 +6,4 @@
 ## 258. Using an Action Creator Thunk
  - Thunk: action creator return an function that execute another action later
 ## 259. Getting Started with Fetching Data
+## 261. Exploring the Redux DevTools
