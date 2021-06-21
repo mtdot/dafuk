@@ -11,6 +11,7 @@
 ## 234. Dispatching Actions From Inside Components
  - useDispatch() hook
  - reducer actions
+ - action payload
 
 ## 240. Adding State Slices
  - useSice() hook
