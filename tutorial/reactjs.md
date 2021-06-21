@@ -3,6 +3,8 @@
 
 # Content
 
+## 242. Migrating Everything To Redux Toolkit
+
 ## 254. Where To Put Our Logic
  - Where to put async/sync code?
  - [CODE](https://github.com/academind/react-complete-guide-code/tree/19-advanced-redux/code/zz-suboptimal-example-code)
