@@ -108,3 +108,7 @@
  - `location.search`
  - `URLSearchParams` class
  - `queryParams.get()` to access queries.
+ - Different between `match.url` and `location.pathname`
+ > `match.url`: take from `<Route path="..."></Route>`
+ 
+ > `location.pathname`: relative path with root path
