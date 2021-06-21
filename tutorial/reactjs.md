@@ -10,6 +10,7 @@
 
 ## 234. Dispatching Actions From Inside Components
  - useDispatch() hook
+ - reducer actions
 
 ## 240. Adding State Slices
  - useSice() hook
