@@ -112,3 +112,5 @@
  > `match.url`: take from `<Route path="..."></Route>`
  
  > `location.pathname`: relative path with root path
+
+ - Using `history.push()` with object `{pathname: '...', search: '...'}
