@@ -42,6 +42,8 @@
  - Route
  - BrowserRouter
 
+ > Potential issue with Route with urls with same suffix. Ex: `/products` & `/products/:productId` will be both trigged.
+
 ## 268. Working with Links
  - Link
  - Link vs Route
@@ -59,4 +61,9 @@
  ```
 
 ## 270. Adding Dynamic Routes with Params
- - 
+```jsx
+<Route path="/abcxyz/:productId">Product</Route>
+```
+
+## 271. Extracting Route Params
+ - useParams() hook
