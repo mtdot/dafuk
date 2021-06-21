@@ -3,6 +3,8 @@
 
 # Content
 
+## 232. Providing the Store
+
 ## 242. Migrating Everything To Redux Toolkit
 
 ## 243. Working with Multiple Slices
