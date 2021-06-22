@@ -9,6 +9,10 @@
 ## 104. Working with Portals
  - Understanding portals concept & how to apply
 
+## 105. Working with "ref"s
+ - Should use only to get value from `input`
+ - Avoid manipulate value of DOM element, let it manipulate via `state`
+
 ## 154. `Optimization` Preventing Unnecessary Re-Evaluations with `React.memo()`
  - Caching components
 
