@@ -169,3 +169,11 @@
 
 ## 311. Finishing Steps
  - complete auto-logout steps
+
+# NEXTJS
+
+## 322. Creating Dynamic Pages (with Parameters)
+ - Understanding path, nested path concepts: by `filename.js`, by `foldername/index.js`, by `foldername/nested-path.js`, by `foldername/nested-folder/index.js`
+ - Understanding dynamic path (parameters): by `[newsId].js`, by folder `[newsId]/index.js`
+ - Understanding `useRouter()` hook: `const router = useRouter()`, `const newsId = router.query.newsId;`
+ - `Link` component from `next/link`
