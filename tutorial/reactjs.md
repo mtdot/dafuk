@@ -9,6 +9,21 @@
 ## 104. Working with Portals
  - Understanding portals concept & how to apply
 
+## 154. `Optimization` Preventing Unnecessary Re-Evaluations with `React.memo()`
+ - Caching components
+
+## 156. `Optimization` `useCallback()` and its Dependencies
+ - Caching methods
+
+## 160. `Optimization` Optimizing with `useMemo()`
+ - Caching objects
+
+## 190. `Refactoring` Building a Custom Http Hook
+ - Understanding custom hook for http request
+
+## 205. `Refactoring` BAdding A Custom Input Hook
+ - Understanding custom hook for input field
+
 ## 232. Providing the Store
 
 ## 233. Using Redux Data in React Components
@@ -26,7 +41,7 @@
 
 ## 243. Working with Multiple Slices
 
-## 245. Splitting Our Code
+## 245. `Refactoring` Splitting Our Code
  - Separating slices
  - Exporting reducer & reducer actions
 
@@ -36,7 +51,7 @@
 
 ## 258. Using an Action Creator Thunk
  - Thunk: action creator return an function that execute another action later
- - 
+
 ## 259. Getting Started with Fetching Data
 
 ## 261. Exploring the Redux DevTools
