@@ -3,6 +3,12 @@
 
 # Content
 
+## 102. React Fragments
+ - Understanding fragments component & how it work
+
+## 104. Working with Portals
+ - Understanding portals concept & how to apply
+
 ## 232. Providing the Store
 
 ## 233. Using Redux Data in React Components
@@ -114,3 +120,14 @@
  > `location.pathname`: relative path with root path
 
  - Using `history.push()` with object `{pathname: '...', search: '...'}
+
+## 287. Sending & Getting Quote Data via Http
+ - separating api to specific file
+
+## 292. `Optimization` Adding Lazy Loading
+ - `React.lazy()`
+ - `Suspense` component
+ - Avoid `Layout` and `Progress bar` component
+
+## 295. Exploring Routing Issues & Finishing Deployment
+ - Understanding configure single page app [stackoverflow](https://stackoverflow.com/questions/37667626/firebase-cli-configure-as-a-single-page-app-rewrite-all-urls-to-index-html)
