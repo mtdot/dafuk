@@ -128,6 +128,7 @@
 ## 282. Implementing Programmatic (Imperative) Navigation
  - useHistory() hook
  - Different between history.push() & history.replace(): `push` can go back with BACK button of browser, `replace` cannot
+ - `Tips`: for authentication page, `history.replace('/')` is good~
 
 ## 283. Preventing Possibly Unwanted Route Transitions with the "Prompt" Component
  - `Prompt` component. Making confirmation when leaving editting form. 
@@ -154,3 +155,17 @@
 
 ## 295. Exploring Routing Issues & Finishing Deployment
  - Understanding configure single page app [stackoverflow](https://stackoverflow.com/questions/37667626/firebase-cli-configure-as-a-single-page-app-rewrite-all-urls-to-index-html)
+
+## 308. `Security` Protecting Frontend Pages
+ - Protect all main routes with `isLoggedIn` from `AuthContext`
+ - Redirect to `/auth` if need (ex: need login to view the page)
+ - `Again` Refer section `281` for adding a "Not Found" Page
+
+## 309. Persisting The User Authentication Status
+ - using `localstorage` to persisting authentication token
+
+## 310. Adding Auto-Logout
+ - handling expired token by using `setTimeout` for calling `logout` base on `remainingTime`
+
+## 311. Finishing Steps
+ - complete auto-logout steps
