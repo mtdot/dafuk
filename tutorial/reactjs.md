@@ -177,3 +177,12 @@
  - Understanding dynamic path (parameters): by `[newsId].js`, by folder `[newsId]/index.js`
  - Understanding `useRouter()` hook: `const router = useRouter()`, `const newsId = router.query.newsId;`
  - `Link` component from `next/link`
+
+## 329. The "_app.js" File & Layout Wrapper
+ - layout
+
+## 330. Using Programmatic (Imperative) Navigation
+ - `useRouter()` hook to `push` navigation
+
+## 333. Data Fetching for Static Pages
+ - Static site pre-rendering with `getStaticProps()`
