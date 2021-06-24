@@ -236,3 +236,26 @@
 ## 389. Working With Mocks
  - Mocking api with `jest`
  -
+
+# ReactJS + TytpeScript
+
+## 405. Working with Props & TypeScript
+ - type inference with `React.FC<{ items: string[] }>` of functional component
+ - this type inference also support for auto completion feature of IDE
+
+## 408. Form Submissions In TypeScript Projects
+ - handle form submit with `React.FormEvent`
+ > const submitHandler = (event: React.FormEvent) => { }
+
+## 409. Working with refs & useRef
+ - refs with `HTMLInputElement`
+ > const inputRef = useRef<HTMLInputElement>(null);
+
+## 410. Working with "Function Props"
+ - Generic type for function
+ ```ts
+ const NewTodo: React.FC<{
+  onAddTodo: () => void
+ }> = (props) => {}
+ ```
+
