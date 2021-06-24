@@ -1,0 +1,2586 @@
+<table class="simple">
+        <caption>
+          Rules of ARIA attribute usage by HTML element
+        </caption>
+        <thead>
+          <tr>
+            <th>
+              HTML element
+            </th>
+            <th>
+              <p id="implicit">
+                Implicit ARIA semantics
+                <small>(explicitly assigning these in markup is <em class="rfc2119">NOT RECOMMENDED</em>)</small>
+              </p>
+            </th>
+            <th>
+              ARIA roles, states and properties which <em class="rfc2119">MAY</em> be used
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="el-a" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element">a</a></code> with
+              <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-href">href</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-link">link</a></code>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-button"><code>button</code></a>,
+                <a href="#index-aria-checkbox"><code>checkbox</code></a>,
+                <a href="#index-aria-menuitem"><code>menuitem</code></a>,
+                <a href="#index-aria-menuitemcheckbox"><code>menuitemcheckbox</code></a>,
+                <a href="#index-aria-menuitemradio"><code>menuitemradio</code></a>,
+                <a href="#index-aria-option"><code>option</code></a>,
+                <a href="#index-aria-radio"><code>radio</code></a>,
+                <a href="#index-aria-switch"><code>switch</code></a>,
+                <a href="#index-aria-tab"><code>tab</code></a>
+                or <a href="#index-aria-treeitem"><code>treeitem</code></a>
+              </p>
+              <p>
+                DPub Roles:
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-backlink"><code>doc-backlink</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-biblioref"><code>doc-biblioref</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-glossref"><code>doc-glossref</code></a>
+                or <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-noteref"><code>doc-noteref</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p><p>
+                It is <em class="rfc2119">NOT RECOMMENDED</em> to use <code>aria-disabled="true"</code> on an
+                <code>a</code> element with an <code>href</code> attribute.
+              </p>
+              <div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note-1" aria-level="3"><span>Note</span></div><div class="">
+                If a link needs to be "disabled", remove the <code>href</code> attribute.
+              </div></div>
+            </td>
+          </tr>
+          <tr id="el-a-no-href" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element">a</a></code> without <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-href">href</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-1">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-1"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-abbr" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element">abbr</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-2">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-2"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-address" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/sections.html#the-address-element">address</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-3">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-3"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-area" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element">area</a></code> with <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-href">href</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-link">link</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <a href="#index-aria-link"><code>link</code></a> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-area-no-href" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element">area</a></code> without <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-href">href</a></code>
+            </th>
+            <td><a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-4">No corresponding role</a></td>
+            <td>
+              <p><strong class="nosupport">No <code>role</code></strong></p>
+              <p><a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a>
+              and any <code>aria-*</code> attributes applicable to the allowed roles.</p>
+            </td>
+          </tr>
+          <tr id="el-article" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/sections.html#the-article-element">article</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-article">article</a></code>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-application"><code>application</code></a>,
+                <a href="#index-aria-document"><code>document</code></a>,
+                <a href="#index-aria-feed"><code>feed</code></a>,
+                <a href="#index-aria-main"><code>main</code></a>,
+                <a href="#index-aria-none"><code>none</code></a>,
+                <a href="#index-aria-presentation"><code>presentation</code></a>
+                or <a href="#index-aria-region"><code>region</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-aside" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/sections.html#the-aside-element">aside</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-complementary">complementary</a></code>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-feed"><code>feed</code></a>,
+                <a href="#index-aria-none"><code>none</code></a>,
+                <a href="#index-aria-note"><code>note</code></a>,
+                <a href="#index-aria-presentation"><code>presentation</code></a>,
+                <a href="#index-aria-region"><code>region</code></a>
+                or <a href="#index-aria-search"><code>search</code></a>.
+              </p>
+              <p>
+                DPub Roles:
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-dedication"><code>doc-dedication</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-example"><code>doc-example</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-footnote"><code>doc-footnote</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-pullquote"><code>doc-pullquote</code></a>
+                or <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-tip"><code>doc-tip</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-audio" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/media.html#the-audio-element"><code>audio</code></a>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-5">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                Role:
+                <a href="#index-aria-application"><code>application</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <a href="#index-aria-application"><code>application</code></a> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-autonomous-custom-element" tabindex="-1">
+            <th>
+              <a data-type="dfn" href="https://html.spec.whatwg.org/multipage/custom-elements.html#autonomous-custom-element">autonomous custom element</a>
+            </th>
+            <td>
+              Role exposed from author defined <a data-link-type="idl" data-lt="ElementInternals" data-type="interface" href="https://html.spec.whatwg.org/multipage/custom-elements.html#elementinternals"><code>ElementInternals</code></a>.
+              Otherwise <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-6">no corresponding role</a>.
+            </td>
+            <td>
+              <p>If role defined by <code>ElementInternals</code>, <strong class="nosupport">no <code>role</code></strong>.</p>
+              <p>
+                Otherwise, <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-4"><strong>any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-b" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-b-element">b</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-7">No corresponding role</a>
+            </td>
+            <td>
+              <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-5"><strong>Any</strong> <code>role</code></a>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-base" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-base-element">base</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-8">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-bdi" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdi-element">bdi</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-9">No corresponding role</a>
+            </td>
+            <td>
+              <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-6"><strong>Any</strong> <code>role</code></a>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-bdo" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdo-element">bdo</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-10">No corresponding role</a>
+            </td>
+            <td>
+              <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-7"><strong>Any</strong> <code>role</code></a>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-blockquote" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element">blockquote</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-11">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-8"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-body" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/sections.html#the-body-element">body</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-12">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a>
+                and any <code>aria-*</code> attributes applicable to the
+                <a href="#index-aria-document"><code>document</code></a> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-br" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-br-element">br</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-13">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-presentation"><code>presentation</code></a>
+                or <a href="#index-aria-none"><code>none</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-button" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element">button</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-button">button</a></code>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-checkbox"><code>checkbox</code></a>,
+                <a href="#index-aria-link"><code>link</code></a>,
+                <a href="#index-aria-menuitem"><code>menuitem</code></a>,
+                <a href="#index-aria-menuitemcheckbox"><code>menuitemcheckbox</code></a>,
+                <a href="#index-aria-menuitemradio"><code>menuitemradio</code></a>,
+                <a href="#index-aria-option"><code>option</code></a>,
+                <a href="#index-aria-radio"><code>radio</code></a>,
+                <a href="#index-aria-switch"><code>switch</code></a>
+                or <a href="#index-aria-tab"><code>tab</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-canvas" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/canvas.html#canvas">canvas</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-14">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-9"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-caption" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-caption-element">caption</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-15">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a>
+              </p>
+            </td>
+          </tr>
+          <tr id="el-cite" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-cite-element">cite</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-16">No corresponding role</a>
+            </td>
+            <td>
+              <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-10"><strong>Any</strong> <code>role</code></a>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-code" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-code-element">code</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-17">No corresponding role</a>
+            </td>
+            <td>
+              <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-11"><strong>Any</strong> <code>role</code></a>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-col" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-col-element">col</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-18">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-colgroup" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element">colgroup</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-19">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-data" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-data-element">data</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-20">No corresponding role</a>
+            </td>
+            <td>
+              <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-12"><strong>Any</strong> <code>role</code></a>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-datalist" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element">datalist</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-listbox">listbox</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a>
+                and any <code>aria-*</code> attributes applicable to the
+                <a href="#index-aria-listbox"><code>listbox</code></a> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-dd" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dd-element">dd</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-definition">definition</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>definition</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-del" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/edits.html#the-del-element">del</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-21">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-13"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-dfn" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-dfn-element">dfn</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-term">term</a></code>
+            </td>
+            <td>
+              <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-14"><strong>Any</strong> <code>role</code></a>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-details" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element">details</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-group">group</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>group</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-dialog" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element">dialog</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-dialog">dialog</a></code>
+            </td>
+            <td>
+              <p>
+                Role:
+                <a href="#index-aria-alertdialog"><code>alertdialog</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>dialog</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-div" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element">div</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-22">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-15"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-dl" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element">dl</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-23">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-group"><code>group</code></a>,
+                <a href="#index-aria-list"><code>list</code></a>,
+                <a href="#index-aria-presentation"><code>presentation</code></a>
+                or <a href="#index-aria-none"><code>none</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-dt" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dt-element">dt</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-term">term</a></code>
+            </td>
+            <td>
+              <p>
+                Role:
+                <a href="#index-aria-listitem"><code>listitem</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-em" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element">em</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-24">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-16"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-embed" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element">embed</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-25">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-application"><code>application</code></a>,
+                <a href="#index-aria-document"><code>document</code></a>,
+                <a href="#index-aria-img"><code>img</code></a>,
+                <a href="#index-aria-presentation"><code>presentation</code></a>
+                or <a href="#index-aria-none"><code>none</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-fieldset" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/form-elements.html#the-fieldset-element">fieldset</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-group">group</a></code>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-none"><code>none</code></a>,
+                <a href="#index-aria-presentation"><code>presentation</code></a>
+                or <a href="#index-aria-radiogroup"><code>radiogroup</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-figcaption" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-figcaption-element">figcaption</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-26">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-group"><code>group</code></a>,
+                <a href="#index-aria-presentation"><code>presentation</code></a>
+                or <a href="#index-aria-none"><code>none</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-figure" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-figure-element">figure</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-figure">figure</a></code>
+            </td>
+            <td>
+              <p>
+                If the <code>figure</code> has no <code>figcaption</code> descendant:
+                <br>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-17"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                If the <code>figure</code> has a <code>figcaption</code> descendant:
+                <br>
+                <strong class="nosupport">No <code>role</code></strong>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-footer" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/sections.html#the-footer-element">footer</a></code>
+            </th>
+            <td>
+              If not a descendant of an <code>article</code>, <code>aside</code>, <code>main</code>, <code>nav</code>
+              or <code>section</code> element, or an element with <code>role=article</code>, <code>complementary</code>,
+              <code>main</code>, <code>navigation</code> or <code>region</code>
+              then <code>role=<a href="#index-aria-contentinfo">contentinfo</a></code>.
+              Otherwise <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-27">no corresponding role</a>.
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-group"><code>group</code></a>,
+                <a href="#index-aria-none"><code>none</code></a>
+                or <a href="#index-aria-presentation"><code>presentation</code></a>.
+              </p>
+              <p>
+                DPub Roles:
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-footnote"><code>doc-footnote</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-form" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-form-element">form</a></code>
+            </th>
+            <td>
+              If the <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-form-element">form</a></code> element has an
+              <a data-link-type="dfn" href="https://www.w3.org/TR/html-aam-1.0/#dfn-accessible-name">accessible name</a>:
+              <code>role=<a href="#index-aria-form">form</a></code>.
+              Otherwise, <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-28">no corresponding role</a>.
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-search"><code>search</code></a>,
+                <a href="#index-aria-none"><code>none</code></a>
+                or <a href="#index-aria-presentation"><code>presentation</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-form-associated-custom-element" tabindex="-1">
+            <th>
+              <a data-type="dfn" href="https://html.spec.whatwg.org/multipage/custom-elements.html#form-associated-custom-element">form-associated custom element</a>
+            </th>
+            <td>
+              Role exposed from author defined <a data-link-type="idl" data-lt="ElementInternals" data-type="interface" href="https://html.spec.whatwg.org/multipage/custom-elements.html#elementinternals"><code>ElementInternals</code></a>.
+              Otherwise <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-29">no corresponding role</a>.
+            </td>
+            <td>
+              <p>If role defined by <code>ElementInternals</code>, <strong class="nosupport">no <code>role</code></strong>.</p>
+              <p>Otherwise, form-related roles:
+                <a href="#index-aria-button"><code>button</code></a>,
+                <a href="#index-aria-checkbox"><code>checkbox</code></a>,
+                <a href="#index-aria-combobox"><code>combobox</code></a>,
+                <a href="#index-aria-listbox"><code>listbox</code></a>,
+                <a href="#index-aria-progressbar"><code>progressbar</code></a>,
+                <a href="#index-aria-group"><code>group</code></a>,
+                <a href="#index-aria-radio"><code>radio</code></a>,
+                <a href="#index-aria-radiogroup"><code>radiogroup</code></a>,
+                <a href="#index-aria-searchbox"><code>searchbox</code></a>,
+                <a href="#index-aria-slider"><code>slider</code></a>,
+                <a href="#index-aria-spinbutton"><code>spinbutton</code></a>,
+                <a href="#index-aria-switch"><code>switch</code></a>
+                or <a href="#index-aria-textbox"><code>textbox</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-h1-h6" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements"><code>h1 to h6</code></a>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-heading">heading</a></code>,
+              <code>aria-level</code> = the number in the element's tag name.
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-none"><code>none</code></a>,
+                <a href="#index-aria-presentation"><code>presentation</code></a>
+                or <a href="#index-aria-tab"><code>tab</code></a>.
+              </p>
+              <p>
+                DPub Role:
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-subtitle"><code>doc-subtitle</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-head" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-head-element">head</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-30">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-header" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/sections.html#the-header-element">header</a></code>
+            </th>
+            <td>
+              If not a descendant of an <code>article</code>, <code>aside</code>, <code>main</code>,
+              <code>nav</code> or <code>section</code> element, or an element with <code>role=article</code>,
+              <code>complementary</code>, <code>main</code>, <code>navigation</code>
+              or <code>region</code> then <code>role=<a href="#index-aria-banner">banner</a></code>.
+              Otherwise <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-31">no corresponding role</a>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-group"><code>group</code></a>,
+                <a href="#index-aria-none"><code>none</code></a>
+                or <a href="#index-aria-presentation"><code>presentation</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-hgroup" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/sections.html#the-hgroup-element">hgroup</a></code>
+            </th>
+            <td><a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-32">No corresponding role</a></td>
+            <td>
+              <p><a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-18"><strong>Any</strong> <code>role</code></a>.</p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-hr" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-hr-element">hr</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-separator">separator</a></code>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-none"><code>none</code></a>
+                or <a href="#index-aria-presentation"><code>presentation</code></a>.
+              </p>
+              <p>
+                DPub Role:
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-pagebreak"><code>doc-pagebreak</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>separator</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-html" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-html-element">html</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-document">document</a></code>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-i" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-i-element">i</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-33">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-19"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-iframe" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element">iframe</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-34">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-application"><code>application</code></a>,
+                <a href="#index-aria-document"><code>document</code></a>,
+                <a href="#index-aria-img"><code>img</code></a>,
+                <a href="#index-aria-none"><code>none</code></a>
+                or <a href="#index-aria-presentation"><code>presentation</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-img" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code> with <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-alt">alt</a></code><code>="some text"</code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-img">img</a></code>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-button"><code>button</code></a>,
+                <a href="#index-aria-checkbox"><code>checkbox</code></a>,
+                <a href="#index-aria-link"><code>link</code></a>,
+                <a href="#index-aria-menuitem"><code>menuitem</code></a>,
+                <a href="#index-aria-menuitemcheckbox"><code>menuitemcheckbox</code></a>,
+                <a href="#index-aria-menuitemradio"><code>menuitemradio</code></a>,
+                <a href="#index-aria-option"><code>option</code></a>,
+                <a href="#index-aria-progressbar"><code>progressbar</code></a>,
+                <a href="#index-aria-scrollbar"><code>scrollbar</code></a>,
+                <a href="#index-aria-separator"><code>separator</code></a>,
+                <a href="#index-aria-slider"><code>slider</code></a>,
+                <a href="#index-aria-switch"><code>switch</code></a>,
+                <a href="#index-aria-tab"><code>tab</code></a> or
+                <a href="#index-aria-treeitem"><code>treeitem</code></a>
+              </p>
+              <p>
+                DPub Role:
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-cover"><code>doc-cover</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-img-empty-alt" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code> with
+              <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-alt">alt</a></code><code>=""</code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-presentation">presentation</a></code>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+              except <code>aria-hidden="true"</code>.
+            </td>
+          </tr>
+          <tr id="el-img-no-alt" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">img</a></code> <a href="https://html.spec.whatwg.org/multipage/images.html#unknown-images">without an <code>alt</code> attribute</a>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-img">img</a></code>
+            </td>
+            <td>
+              <p>
+                If no accessible name is provided via other <a href="https://www.w3.org/TR/html-aam-1.0/#img-element-accessible-name-computation"><code>img</code> naming methods</a> (e.g., <code>aria-labelledby</code>, <code>aria-label</code>): <strong class="nosupport">No <code>role</code></strong>, and
+                <strong>no <code>aria-*</code> attributes</strong> except <code>aria-hidden="true"</code>.
+              </p>
+              <p>
+                Otherwise, if the <code>img</code> has an author defined accessible name, see <a href="#el-img"><code>img</code> with <code>alt="some text"</code></a>.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-button" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#button-state-(type=button)"><code>input type=button</code></a>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-button">button</a></code>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-link"><code>link</code></a>,
+                <a href="#index-aria-menuitem"><code>menuitem</code></a>,
+                <a href="#index-aria-menuitemcheckbox"><code>menuitemcheckbox</code></a>,
+                <a href="#index-aria-menuitemradio"><code>menuitemradio</code></a>,
+                <a href="#index-aria-option"><code>option</code></a>,
+                <a href="#index-aria-radio"><code>radio</code></a>,
+                <a href="#index-aria-switch"><code>switch</code></a>
+                or <a href="#index-aria-tab"><code>tab</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-checkbox" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#checkbox-state-(type=checkbox)"><code>input type=checkbox</code></a>
+            </th>
+            <td>
+              <p>
+                <code>role=<a href="#index-aria-checkbox">checkbox</a></code>
+              </p>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-menuitemcheckbox"><code>menuitemcheckbox</code></a>,
+                <a href="#index-aria-option"><code>option</code></a>
+                or <a href="#index-aria-switch"><code>switch</code></a>;
+                <a href="#index-aria-button"><code>button</code> if used with <code>aria-pressed</code></a>.
+              </p>
+              <p>
+                Authors <a href="#att-checked"><em class="rfc2119">SHOULD NOT</em> use the <code>aria-checked</code> attribute on <code>input type=checkbox</code> elements</a>.
+              </p>
+              <p>
+                Otherwise, any <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+              <div class="note" role="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-2" aria-level="3"><span>Note</span></div><p class="">
+                The HTML <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/input.html#attr-input-checked">checked</a></code> attribute can be used instead of
+                the <code>aria-checked</code> attribute for <code>menuitemcheckbox</code>, <code>option</code>
+                or <code>switch</code> roles when used on <code>type=checkbox</code>.
+              </p></div>
+            </td>
+          </tr>
+          <tr id="el-input-color" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#color-state-(type=color)"><code>input type=color</code></a>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-35">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a>
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-date" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#date-state-(type=date)"><code>input type=date</code></a>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-36">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a>
+                and any <code>aria-*</code> attributes applicable to the <code>textbox</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-datetime-local" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#local-date-and-time-state-(type=datetime-local)"><code>input type=datetime-local</code></a>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-37">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a>
+                and any <code>aria-*</code> attributes applicable to the <code>textbox</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-email" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#e-mail-state-(type=email)"><code>input type=email</code></a>
+              with no <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/input.html#attr-input-list">list</a></code> attribute
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-checkbox">textbox</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>textbox</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-file" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#file-upload-state-(type=file)"><code>input type=file</code></a>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-38">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a>
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-hidden" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#hidden-state-(type=hidden)"><code>input type=hidden</code></a>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-39">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-input-image" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)"><code>input type=image</code></a>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-button">button</a></code>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-link"><code>link</code></a>,
+                <a href="#index-aria-menuitem"><code>menuitem</code></a>,
+                <a href="#index-aria-menuitemcheckbox"><code>menuitemcheckbox</code></a>,
+                <a href="#index-aria-menuitemradio"><code>menuitemradio</code></a>,
+                <a href="#index-aria-radio"><code>radio</code></a>
+                or <a href="#index-aria-switch"><code>switch</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-month" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#month-state-(type=month)"><code>input type=month</code></a>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-40">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code>textbox</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-number" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#number-state-(type=number)"><code>input type=number</code></a>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-spinbutton">spinbutton</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>spinbutton</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-password" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#password-state-(type=password)"><code>input type=password</code></a>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-41">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code>textbox</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-radio" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#radio-button-state-(type=radio)"><code>input type=radio</code></a>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-radio">radio</a></code>
+            </td>
+            <td>
+              <p>
+                Role:
+                <a href="#index-aria-menuitemradio"><code>menuitemradio</code></a>
+              </p>
+              <p>
+                Authors <a href="#att-checked"><em class="rfc2119">SHOULD NOT</em> use the
+                <code>aria-checked</code> attribute on <code>input type=radio</code> elements</a>.
+              </p>
+              <p>
+                Otherwise, any <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes
+                applicable to the allowed roles.
+              </p>
+              <div class="note" role="note" id="issue-container-generatedID-1"><div role="heading" class="note-title marker" id="h-note-3" aria-level="3"><span>Note</span></div><p class="">
+                The HTML <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/input.html#attr-input-checked">checked</a></code> attribute can be used instead of
+                the <code>aria-checked</code> attribute for the <code>menuitemradio</code> role
+                when used on <code>type=radio</code>.
+              </p></div>
+            </td>
+          </tr>
+          <tr id="el-input-range" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)"><code>input type=range</code></a>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-slider">slider</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                Authors <em class="rfc2119">SHOULD NOT</em> use the <a href="#att-max"><code>aria-valuemax</code></a> or <a href="#att-min"><code>aria-valuemin</code></a> attributes on <code>input type=range</code>.
+              </p>
+              <p>
+                Otherwise, any <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">global <code>aria-*</code> attributes</a> and any other <code>aria-*</code> attributes applicable
+                to the <code>slider</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-reset" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#reset-button-state-(type=reset)"><code>input type=reset</code></a>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-button">button</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>button</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-search" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#text-(type=text)-state-and-search-state-(type=search)"><code>input type=search</code></a>,
+              with no <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/input.html#attr-input-list">list</a></code> attribute
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-searchbox">searchbox</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>searchbox</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-submit" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#submit-button-state-(type=submit)"><code>input type=submit</code></a>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-button">button</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>button</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-tel" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#telephone-state-(type=tel)"><code>input type=tel</code></a>, with no <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/input.html#attr-input-list">list</a></code> attribute
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-textbox">textbox</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>textbox</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-text" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#text-(type=text)-state-and-search-state-(type=search)"><code>input type=text</code></a>
+              or with a missing or invalid <code>type</code>, with no <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/input.html#attr-input-list">list</a></code> attribute
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-textbox">textbox</a></code>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-combobox"><code>combobox</code></a>,
+                <a href="#index-aria-searchbox"><code>searchbox</code></a>
+                or <a href="#index-aria-spinbutton"><code>spinbutton</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-text-list" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#text-(type=text)-state-and-search-state-(type=search)"><code>input type=text</code></a>,
+              <a href="https://html.spec.whatwg.org/multipage/input.html#text-(type=text)-state-and-search-state-(type=search)"><code>search</code></a>,
+              <a href="https://html.spec.whatwg.org/multipage/input.html#telephone-state-(type=tel)"><code>tel</code></a>,
+              <a href="https://html.spec.whatwg.org/multipage/input.html#url-state-(type=url)"><code>url</code></a>,
+              <a href="https://html.spec.whatwg.org/multipage/input.html#e-mail-state-(type=email)"><code>email</code></a>,
+              or with a missing or invalid <code>type</code>, <strong>with a <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/input.html#attr-input-list">list</a></code> attribute</strong>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-combobox">combobox</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                Authors <em class="rfc2119">SHOULD NOT</em> use the <code>aria-haspopup</code> attribute on the indicated <code>input</code>s with a <code>list</code> attribute.
+              </p>
+              <p>
+                Otherwise, any
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">global <code>aria-*</code> attributes</a> and
+                any other <code>aria-*</code> attributes applicable to the <code>combobox</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-time" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#time-state-(type=time)"><code>input type=time</code></a>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-42">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code>textbox</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-url" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#url-state-(type=url)"><code>input type=url</code></a>
+              with no
+              <code><a data-type="element-attr" href="https://html.spec.whatwg.org/multipage/input.html#attr-input-list">list</a></code> attribute
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-textbox">textbox</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>textbox</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-input-week" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/input.html#week-state-(type=week)"><code>input type=week</code></a>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-43">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code>textbox</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-ins" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/edits.html#the-ins-element">ins</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-44">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-20"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-kbd" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-kbd-element">kbd</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-45">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-21"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-label" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/forms.html#the-label-element">label</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-46">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a>
+              </p>
+            </td>
+          </tr>
+          <tr id="el-legend" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element">legend</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-47">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a>
+              </p>
+            </td>
+          </tr>
+          <tr id="el-li" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element">li</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-listitem">listitem</a></code>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-menuitem"><code>menuitem</code></a>,
+                <a href="#index-aria-menuitemcheckbox"><code>menuitemcheckbox</code></a>,
+                <a href="#index-aria-menuitemradio"><code>menuitemradio</code></a>,
+                <a href="#index-aria-option"><code>option</code></a>,
+                <a href="#index-aria-none"><code>none</code></a>,
+                <a href="#index-aria-presentation"><code>presentation</code></a>,
+                <a href="#index-aria-radio"><code>radio</code></a>,
+                <a href="#index-aria-separator"><code>separator</code></a>,
+                <a href="#index-aria-tab"><code>tab</code></a>
+                or <a href="#index-aria-treeitem"><code>treeitem</code></a>
+              </p>
+              <p>
+                DPub Roles:
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-biblioentry"><code>doc-biblioentry</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-endnote"><code>doc-endnote</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-link" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-link-element">link</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-48">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-main" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-main-element">main</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-main">main</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>main</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-map" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/image-maps.html#the-map-element">map</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-49">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-math" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/embedded-content-other.html#mathml"><code>math</code></a>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-math">math</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>math</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-mark" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-mark-element">mark</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-50">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-22"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-menu" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-menu-element"><code>menu</code></a>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-list">list</a></code>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-directory"><code>directory</code></a>,
+                <a href="#index-aria-group"><code>group</code></a>,
+                <a href="#index-aria-listbox"><code>listbox</code></a>,
+                <a href="#index-aria-menu"><code>menu</code></a>,
+                <a href="#index-aria-menubar"><code>menubar</code></a>,
+                <a href="#index-aria-none"><code>none</code></a>,
+                <a href="#index-aria-presentation"><code>presentation</code></a>,
+                <a href="#index-aria-radiogroup"><code>radiogroup</code></a>,
+                <a href="#index-aria-tablist"><code>tablist</code></a>,
+                <a href="#index-aria-toolbar"><code>toolbar</code></a>
+                or <a href="#index-aria-tree"><code>tree</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-meta" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#meta">meta</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-51">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-meter" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/form-elements.html#the-meter-element">meter</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-52">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                Authors <em class="rfc2119">SHOULD NOT</em> use the <a href="#att-max"><code>aria-valuemax</code></a> or <a href="#att-min"><code>aria-valuemin</code></a> attributes on <code>meter</code> elements.
+              </p>
+              <p>
+                Otherwise, any <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">global <code>aria-*</code> attributes</a>.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-nav" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/sections.html#the-nav-element">nav</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-navigation">navigation</a></code>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-menu"><code>menu</code></a>,
+                <a href="#index-aria-menubar"><code>menubar</code></a>
+                or <a href="#index-aria-tablist"><code>tablist</code></a>.
+              </p>
+              <p>
+                DPub Roles:
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-index"><code>doc-index</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-pagelist"><code>doc-pagelist</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-toc"><code>doc-toc</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-noscript" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/scripting.html#the-noscript-element">noscript</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-53">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-object" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element">object</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-54">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-application"><code>application</code></a>,
+                <a href="#index-aria-document"><code>document</code></a>
+                or <a href="#index-aria-img"><code>img</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-ol" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-ol-element">ol</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-list">list</a></code>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-directory"><code>directory</code></a>,
+                <a href="#index-aria-group"><code>group</code></a>,
+                <a href="#index-aria-listbox"><code>listbox</code></a>,
+                <a href="#index-aria-menu"><code>menu</code></a>,
+                <a href="#index-aria-menubar"><code>menubar</code></a>,
+                <a href="#index-aria-none"><code>none</code></a>,
+                <a href="#index-aria-presentation"><code>presentation</code></a>,
+                <a href="#index-aria-radiogroup"><code>radiogroup</code></a>,
+                <a href="#index-aria-tablist"><code>tablist</code></a>,
+                <a href="#index-aria-toolbar"><code>toolbar</code></a>
+                or <a href="#index-aria-tree"><code>tree</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-optgroup" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/form-elements.html#the-optgroup-element">optgroup</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-group">group</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>group</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-option" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/form-elements.html#the-option-element">option</a></code> element that is in a <a href="https://html.spec.whatwg.org/multipage/input.html#attr-input-list">list of options</a> or that
+              represents a suggestion in a <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element">datalist</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-option">option</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                Authors <em class="rfc2119">SHOULD NOT</em> use the <code>aria-selected</code> attribute on the <code>option</code> element.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any other <code>aria-*</code> attributes applicable to the <code>option</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-output" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element">output</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-status">status</a></code>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-23"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-p" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-p-element">p</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-55">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-24"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-param" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-param-element">param</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-56">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-picture" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element">picture</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-57">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-pre" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-pre-element">pre</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-58">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-25"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-progress" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/form-elements.html#the-progress-element">progress</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-progressbar">progressbar</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                Authors <em class="rfc2119">SHOULD NOT</em> use the <a href="#att-max"><code>aria-valuemax</code></a> attribute on <code>progress</code> elements.
+              </p>
+              <p>
+                Otherwise, any <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">global <code>aria-*</code> attributes</a> and any other <code>aria-*</code> attributes applicable to the <code>progressbar</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-q" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-q-element">q</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-59">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-26"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-rp" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-rp-element">rp</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-60">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-27"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-rt" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-rt-element">rt</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-61">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-28"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-ruby" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element">ruby</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-62">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-29"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-s" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-s-element">s</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-63">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-30"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-samp" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-samp-element">samp</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-64">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-31"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-script" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/scripting.html#script">script</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-65">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-section" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/sections.html#the-section-element">section</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-region">region</a></code> if the
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/sections.html#the-section-element">section</a></code> element has an <a data-link-type="dfn" href="https://www.w3.org/TR/html-aam-1.0/#dfn-accessible-name">accessible name</a>. Otherwise, <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-66">no corresponding role</a>.
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-alert"><code>alert</code></a>,
+                <a href="#index-aria-alertdialog"><code>alertdialog</code></a>,
+                <a href="#index-aria-application"><code>application</code></a>,
+                <a href="#index-aria-banner"><code>banner</code></a>,
+                <a href="#index-aria-complementary"><code>complementary</code></a>,
+                <a href="#index-aria-contentinfo"><code>contentinfo</code></a>,
+                <a href="#index-aria-dialog"><code>dialog</code></a>,
+                <a href="#index-aria-document"><code>document</code></a>,
+                <a href="#index-aria-feed"><code>feed</code></a>,
+                <a href="#index-aria-log"><code>log</code></a>,
+                <a href="#index-aria-main"><code>main</code></a>,
+                <a href="#index-aria-marquee"><code>marquee</code></a>,
+                <a href="#index-aria-navigation"><code>navigation</code></a>,
+                <a href="#index-aria-none"><code>none</code></a>,
+                <a href="#index-aria-note"><code>note</code></a>,
+                <a href="#index-aria-presentation"><code>presentation</code></a>,
+                <a href="#index-aria-search"><code>search</code></a>,
+                <a href="#index-aria-status"><code>status</code></a>
+                or <a href="#index-aria-tabpanel"><code>tabpanel</code></a>
+              </p>
+              <p>
+                DPub Roles:
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-abstract"><code>doc-abstract</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-acknowledgments"><code>doc-acknowledgments</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-afterword"><code>doc-afterword</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-appendix"><code>doc-appendix</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-bibliography"><code>doc-bibliography</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-chapter"><code>doc-chapter</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-colophon"><code>doc-colophon</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-conclusion"><code>doc-conclusion</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-credit"><code>doc-credit</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-credits"><code>doc-credits</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-dedication"><code>doc-dedication</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-endnotes"><code>doc-endnotes</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-epigraph"><code>doc-epigraph</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-epilogue"><code>doc-epilogue</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-errata"><code>doc-errata</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-example"><code>doc-example</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-foreword"><code>doc-foreword</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-glossary"><code>doc-glossary</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-index"><code>doc-index</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-introduction"><code>doc-introduction</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-notice"><code>doc-notice</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-pagelist"><code>doc-pagelist</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-part"><code>doc-part</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-preface"><code>doc-preface</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-prologue"><code>doc-prologue</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-pullquote"><code>doc-pullquote</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-qna"><code>doc-qna</code></a>,
+                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-toc"><code>doc-toc</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-select" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element">select</a></code> (with NO <code>multiple</code> attribute and NO <code>size</code>
+              attribute having value greater than <code>1</code>)
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-combobox">combobox</a></code>
+            </td>
+            <td>
+              <p>
+                Role: <a href="#index-aria-menu"><code>menu</code></a>
+              </p>
+              <p>Authors <em class="rfc2119">SHOULD NOT</em> use the <code>aria-multiselectable</code> attribute on a <code>select</code> element.</p>
+              <p>
+                Otherwise, any <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">global <code>aria-*</code> attributes</a> and
+                any other <code>aria-*</code> attributes applicable to the <code>combobox</code> or <code>menu</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-select-multiple-or-size-greater-1" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element">select</a></code> (with a <code>multiple</code> attribute or a <code>size</code> attribute
+              having value greater than <code>1</code>)
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-list">listbox</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>Authors <em class="rfc2119">SHOULD NOT</em> use the <code>aria-multiselectable</code> attribute on a <code>select</code> element.</p>
+              <p>
+                Otherwise, any <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">global <code>aria-*</code> attributes</a> and
+                any other <code>aria-*</code> attributes applicable to the <code>listbox</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-slot" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/scripting.html#the-slot-element">slot</a></code>
+            </th>
+            <td><a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-67">No corresponding role</a></td>
+            <td><strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong></td>
+          </tr>
+          <tr id="el-small" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-small-element">small</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-68">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-32"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-source" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element">source</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-69">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-span" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-span-element">span</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-70">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-33"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-strong" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-strong-element">strong</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-71">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-34"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-style" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-style-element">style</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-72">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-svg" tabindex="-1">
+            <th>
+              <a href="https://html.spec.whatwg.org/multipage/embedded-content-other.html#svg-0"><code>SVG</code></a>
+            </th>
+            <td>
+              <code>role=graphics-document</code> as defined by
+              <a href="https://www.w3.org/TR/svg-aam-1.0/#details-id-66">SVG AAM</a>
+            </td>
+            <td>
+              <p>
+                <strong><a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-35">Any Role</a></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-sub" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-element">sub</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-73">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-36"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-summary" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-summary-element">summary</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-button">button</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>button</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-sup" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sup-element">sup</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-74">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-37"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-table" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element">table</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-table">table</a></code>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-38"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-tbody" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tbody-element">tbody</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-rowgroup">rowgroup</a></code>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-39"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-template" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/scripting.html#the-template-element">template</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-75">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-textarea" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element">textarea</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-textbox">textbox</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>textbox</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-tfoot" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tfoot-element">tfoot</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-rowgroup">rowgroup</a></code>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-40"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-thead" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-thead-element">thead</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-rowgroup">rowgroup</a></code>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-41"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-time" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element">time</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-76">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-42"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-title" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/semantics.html#the-title-element">title</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-77">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-td" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element">td</a></code>
+            </th>
+            <td>
+              <p>
+                <code>role=<a href="#index-aria-cell">cell</a></code> if the ancestor
+                <code>table</code> element is exposed as a <code>role=table</code>.
+              </p>
+              <p>
+                <code>role=<a href="#index-aria-gridcell">gridcell</a></code> if the ancestor
+                <code>table</code> element is exposed as a <code>role=grid</code> or <code>treegrid</code>.
+              </p>
+              <p>
+                <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-78">No corresponding role</a> if the ancestor <code>table</code> element is not exposed
+                as a <code>role=table</code>, <code>grid</code> or <code>treegrid</code>.
+              </p>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong> if the ancestor <code>table</code>
+                element has <code>role=table</code>, <code>grid</code>, or <code>treegrid</code>; otherwise
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-43"><strong>any</strong> <code>role</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-th" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element">th</a></code>
+            </th>
+            <td>
+              <p>
+                <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
+                <a href="#index-aria-rowheader"><code>rowheader</code></a> or <a href="#index-aria-rowheader"><code>cell</code></a> if the ancestor
+                <code>table</code> element is exposed as a <code>role=table</code>.
+              </p>
+              <p>
+                <code>role=<a href="#index-aria-columnheader">columnheader</a></code>,
+                <a href="#index-aria-rowheader"><code>rowheader</code></a> or <a href="#index-aria-rowheader"><code>gridcell</code></a> if the ancestor
+                <code>table</code> element is exposed as a <code>role=grid</code> or <code>treegrid</code>.
+             </p>
+              <p>
+                <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-79">No corresponding role</a> if the ancestor <code>table</code> element is not exposed
+                as a <code>role=table</code>, <code>grid</code> or <code>treegrid</code>.
+              </p>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong> if the ancestor <code>table</code>
+                element has <code>role=table</code>, <code>grid</code>, or <code>treegrid</code>; otherwise
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-44"><strong>any</strong> <code>role</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-tr" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/tables.html#the-tr-element">tr</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-row">row</a></code>
+            </td>
+            <td>
+              <p>
+                <strong class="nosupport">No <code>role</code></strong> if the ancestor <code>table</code>
+                element has <code>role=table</code>, <code>grid</code>, or <code>treegrid</code>; otherwise
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-45"><strong>any</strong> <code>role</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-track" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/media.html#the-track-element">track</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-80">No corresponding role</a>
+            </td>
+            <td>
+              <strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong>
+            </td>
+          </tr>
+          <tr id="el-u" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-u-element">u</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-81">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-46"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-ul" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element">ul</a></code>
+            </th>
+            <td>
+              <code>role=<a href="#index-aria-list">list</a></code>
+            </td>
+            <td>
+              <p>
+                Roles:
+                <a href="#index-aria-directory"><code>directory</code></a>,
+                <a href="#index-aria-group"><code>group</code></a>,
+                <a href="#index-aria-listbox"><code>listbox</code></a>,
+                <a href="#index-aria-menu"><code>menu</code></a>,
+                <a href="#index-aria-menubar"><code>menubar</code></a>,
+                <a href="#index-aria-none"><code>none</code></a>,
+                <a href="#index-aria-presentation"><code>presentation</code></a>,
+                <a href="#index-aria-radiogroup"><code>radiogroup</code></a>,
+                <a href="#index-aria-tablist"><code>tablist</code></a>,
+                <a href="#index-aria-toolbar"><code>toolbar</code></a>
+                or <a href="#index-aria-tree"><code>tree</code></a>.
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-var" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-var-element">var</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-82">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-47"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-video" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/media.html#video">video</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-83">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                Role: <a href="#index-aria-application"><code>application</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the <code>application</code> role.
+              </p>
+            </td>
+          </tr>
+          <tr id="el-wbr" tabindex="-1">
+            <th>
+              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-wbr-element">wbr</a></code>
+            </th>
+            <td>
+              <a href="#dfn-no-corresponding-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-no-corresponding-role-84">No corresponding role</a>
+            </td>
+            <td>
+              <p>
+                <a href="#dfn-any-role" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-any-role-48"><strong>Any</strong> <code>role</code></a>
+              </p>
+              <p>
+                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
+                any <code>aria-*</code> attributes applicable to the allowed roles.
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
