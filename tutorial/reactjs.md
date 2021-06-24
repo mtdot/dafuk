@@ -255,7 +255,7 @@
  - Generic type for function
  ```ts
  const NewTodo: React.FC<{
-  onAddTodo: () => void
+  onAddTodo: (text: string) => void
  }> = (props) => {}
  ```
 
