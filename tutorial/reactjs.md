@@ -185,4 +185,42 @@
  - `useRouter()` hook to `push` navigation
 
 ## 333. Data Fetching for Static Pages
+ - Only use SSG on page components (that belong to nextjs, not reactjs component)
  - Static site pre-rendering with `getStaticProps()`
+
+## 334. More on Static Site Generation (SSG)
+ - `revalidate: 10` property indicate the number of seconds the static page should be re-generated
+
+## 335. Exploring Server-side Rendering (SSR) with `getServerSideProps`
+ - For serve content changed with every request (multiple times per second), understand when to use SSG, when to use SSR
+ - Should be some fetching data from API or file system
+ - Using `context` parameter to access `context.req` & `context.res`
+
+## 336. Working with Params for SSG Data Fetching
+ - Accessing URL parameter via `context` param of `getStaticProps(context)`
+  > const newsId = context.params.newsId;
+
+## 337. Preparing Paths with "getStaticPaths" & Working With Fallback Pages
+ - Combining `getStaticPaths()` with `getStaticProps(context)`
+ - Understanding `paths` property of returning object from `getStaticPaths()`: define available paths
+ - Understanding `fallback` property of returning object from `getStaticPaths()`
+  > `false` => 404 if path not available. [Code](https://nextjs.org/docs/basic-features/data-fetching#fallback-false)
+  > `true`  => return the page in fallback state, using `const router = useRouter(); if (router.isFallback) { ... }` for waiting
+  > `blocking` => same as `true` but browser will wait for SSR done, then render the page
+
+## 338. Introducing API Routes
+ - api seems similar with expressjs
+
+## 340. Sending Http Requests To Our API Routes
+ - using the internal implemented api
+
+## 341. `NextJS` `BE` Getting Data From The Database
+ - Fetching data from DB
+
+## 343. Adding "head" Metadata
+ - `Head` component from `next/head`
+ - Know which head metadata should be add to website
+ - Add different metadata for each 'root' pages
+
+## 385. Grouping Tests Together With Test Suites
+ - Unit test for component & groupping testcases
