@@ -222,5 +222,17 @@
  - Know which head metadata should be add to website
  - Add different metadata for each 'root' pages
 
+## 382. Understanding the Technical Setup & Involved Tools
+ - test library already setup with command `create-react-app`
+
 ## 385. Grouping Tests Together With Test Suites
  - Unit test for component & groupping testcases
+ - `getByRole()`
+
+## 388. Testing Asynchronous Code
+ - Unit test for `async` methods by implement `async` test case
+ - `findAllByRole()` with `await` and `timeout`: default `timeout` is 1s
+
+## 389. Working With Mocks
+ - Mocking api with `jest`
+ -
