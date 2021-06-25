@@ -6,6 +6,8 @@
 - `v-for` directive
 - mounting control element by css selector
 - `data` property name is fixed, require a function return data object
+- `methods` property name is fixed, contains functions definitions
+- Vue.js merge all property in data object into global Vue instance so we can access that properties via `this.propertyName` inside methods
 ```js
 data(): { return {}; }
 ```
@@ -51,6 +53,7 @@ Vue.createApp({
 
 ## 14. Interpolation and Data Binding
   - Interpolation syntax `{{ varName }}` accept data-binding of a `html tag inner HTML` to property name of Vue's data object.
+  - Interpolation syntax `{{ doSomething() }}` for evaluating method
   ```html
   <p>{{ title }}</p>
   ```
@@ -58,4 +61,28 @@ Vue.createApp({
   - data-binding with a property using `v-bind` directive
   ```html
   <a v-bind:href="pageLink">Goto Page</a>
+  ```
+
+## 18. `Security` Outputting Raw HTML Content with v-html
+  - Should be avoid to prevent `Cross Site Scripting (XSS) Software Attack` - `Research later`
+  ```js
+  <p v-html="getSomeHtml()"></p>
+  ```
+  
+## 20. Understanding Event Binding
+  - `v-on:<event>`
+  - List of events?
+  ```js
+  <button v-on:click="counter++">Add</button>
+  <button v-on:click="counter = counter - 1">Reduce</button>
+  <button v-on:click="add(10)">Add 10</button>
+  <button v-on:click="setName">Set Name</button> <!-- this will pass event object as default parameter -->
+  <button v-on:click="setName($event, 'My Name')">Set Name</button> <!-- passing event object with some parameter -->
+  ```
+  
+  ## 24. Exploring Event Modifiers
+  ```
+  <form v-on:submit.prevent="submitForm"> ... </form>
+  <button v-on:click.right="...">Click</button>
+  <input v-on:keyup.enter="confirmValue"/>
   ```
