@@ -3,6 +3,15 @@
 
 # Content
 
+ - [ReactJS](#reactjs)
+ - [Redux](#redux)
+ - [Routing](#routing)
+ - [Http](#http)
+ - [NextJS](#nextjs)
+ - [ReactJS with Typescript](#reactjs-with-typescript)
+
+# REACTJS
+
 ## 102. React Fragments
  - Understanding fragments component & how it work
 
@@ -31,6 +40,8 @@
 
 ## 205. `Refactoring` BAdding A Custom Input Hook
  - Understanding custom hook for input field
+
+# REDUX
 
 ## 232. Providing the Store
 
@@ -66,6 +77,8 @@
 
 ## 263. Module Resources
  - [CODE](https://github.com/academind/react-complete-guide-code/tree/19-advanced-redux)
+
+# ROUTING
 
 ## 267. Defining & Using Routes
  - Route
@@ -144,6 +157,8 @@
  > `location.pathname`: relative path with root path
 
  - Using `history.push()` with object `{pathname: '...', search: '...'}
+
+# HTTP
 
 ## 287. Sending & Getting Quote Data via Http
  - separating api to specific file
@@ -237,7 +252,7 @@
  - Mocking api with `jest`
  -
 
-# ReactJS + TytpeScript
+# ReactJS with TytpeScript
 
 ## 405. Working with Props & TypeScript
  - type inference with `React.FC<{ items: string[] }>` of functional component
