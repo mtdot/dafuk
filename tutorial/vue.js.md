@@ -96,3 +96,26 @@ Vue.createApp({
 v-model="name"
 v-bind:value="name" v-on:input="setName"
 ```
+
+## 28. `Performance` Introducing Computed Properties
+  - `computed` property on Vue's data object
+  - pointing to computed method using method name (`fullname`), not including `(` `)` (`fullname()`)
+  - almost methods related to renderring contents will be implemented as `computed method`, avoid implement as `normal method`
+  - `method` is appropriate for event binding, which need to re-executed on every event trigger
+
+## 29. Working with Watchers
+  - `watch` property on Vue's data object
+  - contains method with same name as properties of Vue's data object
+  - methods will be re-executed whenever the property with same name changed
+  - useful for some task: reset counter for seconds, timer tasks, send a request when value changed, ...
+```js
+watch {
+  name(newName) {
+    this.fullname = newName + " ABCXYZ"
+  }
+  
+  position(newPosition, oldPosition) {
+    // do something with both newPosition and oldPosition
+  }
+}
+```
