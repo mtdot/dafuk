@@ -4,6 +4,9 @@
 - `v-model` directive
 - `v-on:click` directive
 - `v-for` directive
+- `v-once` marking element should be evaluate only once, and never be updated again.
+
+
 - mounting control element by css selector
 - `data` property name is fixed, require a function return data object
 - `methods` property name is fixed, contains functions definitions
@@ -51,9 +54,9 @@ Vue.createApp({
 }).mount('#app');
 ```
 
-## 14. Interpolation and Data Binding
+## 14. `Performance` Interpolation and Data Binding
   - Interpolation syntax `{{ varName }}` accept data-binding of a `html tag inner HTML` to property name of Vue's data object.
-  - Interpolation syntax `{{ doSomething() }}` for evaluating method
+  - Interpolation syntax `{{ doSomething() }}` for evaluating method: This should be avoid, because `doSomething()` alway be executed when anything on the page changed.
   ```html
   <p>{{ title }}</p>
   ```
@@ -80,9 +83,16 @@ Vue.createApp({
   <button v-on:click="setName($event, 'My Name')">Set Name</button> <!-- passing event object with some parameter -->
   ```
   
-  ## 24. Exploring Event Modifiers
+## 24. Exploring Event Modifiers
   ```
   <form v-on:submit.prevent="submitForm"> ... </form>
   <button v-on:click.right="...">Click</button>
   <input v-on:keyup.enter="confirmValue"/>
   ```
+
+## 26. Data Binding + Event Binding = Two-Way Binding
+  - two bellow attribute is similar, indicating two-way binding
+```js
+v-model="name"
+v-bind:value="name" v-on:input="setName"
+```
