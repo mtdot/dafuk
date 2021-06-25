@@ -1,9 +1,20 @@
 # Basic
 
 ## 6. Re-building the App with Vue
-- `v-model` property
-- `v-on:click` property
-- `v-for` property
+- `v-model` directive
+- `v-on:click` directive
+- `v-for` directive
+- mounting control element by css selector
+- `data` property name is fixed, require a function return data object
+```js
+data(): { return {}; }
+```
+or
+```js
+data: function() { return {}; }
+```
+
+
 ```html
 <body>
   <div id="app">
@@ -37,3 +48,14 @@ Vue.createApp({
   }
 }).mount('#app');
 ```
+
+## 14. Interpolation and Data Binding
+  - Interpolation syntax `{{ varName }}` accept data-binding of a `html tag inner HTML` to property name of Vue's data object.
+  ```html
+  <p>{{ title }}</p>
+  ```
+  
+  - data-binding with a property using `v-bind` directive
+  ```html
+  <a v-bind:href="pageLink">Goto Page</a>
+  ```
