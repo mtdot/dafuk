@@ -2,7 +2,8 @@
 
 ## 6. Re-building the App with Vue
 - `v-model` directive
-- `v-on:click` directive
+- `v-on:click` or `@click` or `@click.right` directive
+- `v-bind:value=` or `:value=` directive
 - `v-for` directive
 - `v-once` marking element should be evaluate only once, and never be updated again.
 
@@ -105,6 +106,7 @@ v-bind:value="name" v-on:input="setName"
 
 ## 29. Working with Watchers
   - `watch` property on Vue's data object
+  - `computed` and `watch` methods allow you to react to data changes
   - contains method with same name as properties of Vue's data object
   - methods will be re-executed whenever the property with same name changed
   - useful for some task: reset counter for seconds, timer tasks, send a request when value changed, ...
@@ -118,4 +120,14 @@ watch {
     // do something with both newPosition and oldPosition
   }
 }
+```
+
+## 33. Adding CSS Classes Dynamically
+  - class will be add to element if value of the key is evaluated as `true`
+  - classes can be combined with fixed classes and dynamic classes
+  - dynamic classes can be implemented via `computed` methods, but only useful with complex logic to fill classes
+```js
+<div :class="{active: isActive}">...</div>
+<div class="demo" :class="{active: isActive}">...</div>
+<div class="demo" :class="boxAClasses">...</div> <!-- boxAClasses is a computed method -->
 ```
