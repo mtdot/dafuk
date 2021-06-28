@@ -139,3 +139,7 @@ watch {
   - `v-for="(value, key, index) in {name: 'Foo', age: 20}" for loop through object keys & index
   - `v-for="num in 10"` loop for range [1, 10]
   - remove element by index: [1,2,3,4].splice(2, 1) // remove from index 2 form 1 elements
+
+## 46. Lists & Keys
+  - `@click.stop`: stop propogation click event from children element to parent element. Using this prevent handling click event on both children and parent.
+  - Vue's removing element mechanism in DOM have a potential issue of losing content in case that element have no `v-bind:key` property (`:key`)
