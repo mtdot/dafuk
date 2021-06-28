@@ -131,3 +131,11 @@ watch {
 <div class="demo" :class="{active: isActive}">...</div>
 <div class="demo" :class="boxAClasses">...</div> <!-- boxAClasses is a computed method -->
 ```
+## 40. Rendering Content Conditionally
+  - `<p v-if="items.length === 0">Items non-empty</p>`
+  - `v-else` have to be used by the element directly after the element has `v-if`
+  - `v-show` work same as `v-if` but work standalone (show element if the condition matched). The different is `v-show` using `display: none` to control visibility (Including in DOM) but `v-if` completely remove element in DOM if condition not matched. Only use `v-show` for case element need to toggle frequently.
+  - `v-for="(item, index) in items"` for loop with index
+  - `v-for="(value, key, index) in {name: 'Foo', age: 20}" for loop through object keys & index
+  - `v-for="num in 10"` loop for range [1, 10]
+  - remove element by index: [1,2,3,4].splice(2, 1) // remove from index 2 form 1 elements
