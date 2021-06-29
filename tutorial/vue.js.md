@@ -143,3 +143,21 @@ watch {
 ## 46. Lists & Keys
   - `@click.stop`: stop propogation click event from children element to parent element. Using this prevent handling click event on both children and parent.
   - Vue's removing element mechanism in DOM have a potential issue of losing content in case that element have no `v-bind:key` property (`:key`)
+  - avoid using `index` of element as `key` to prevent the issue related to `index` change every adding/removing item from list
+
+## 60. Vue Reactivity: A Deep Dive
+  - understanding `Proxy` object to obtain changes on js objects.
+
+## 62. Understanding Templates
+  - understand `template` property of when creating Vue instance
+
+## 63. Working with Refs
+  - `ref` keyword: `<input type="text" ref="userInput"/>
+  - access ref via `$refs`: `this.refs.userInput`
+
+## 65. Vue App Lifecycle - Theory
+  - [Lifecycle](https://samsungu.udemy.com/course/vuejs-2-the-complete-guide/learn/lecture/21463392#overview)
+  - All callback belong to Vue Instance
+ 
+## 85. Adding Styling
+  - add style for component inside `<style>` tag
