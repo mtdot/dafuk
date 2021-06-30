@@ -158,6 +158,148 @@ watch {
 ## 65. Vue App Lifecycle - Theory
   - [Lifecycle](https://samsungu.udemy.com/course/vuejs-2-the-complete-guide/learn/lecture/21463392#overview)
   - All callback belong to Vue Instance
- 
-## 85. Adding Styling
-  - add style for component inside `<style>` tag
+
+## 84. Adding a Component
+  - define component
+  - `template` area
+  - `script` area
+  - add style for component inside `<style>` area
+  - 
+  ```js
+  <template>
+    <h1>{{name}}</h1>
+  </template>
+  <script>
+  export default {
+    data() {
+      return {
+        name: "Abcxyz"
+      }
+    }
+    methods: {
+      // same as app
+    }
+  }
+  </script>
+  ```
+  - registerring component
+  ```
+  app = createApp(App);
+  app.component('friend-contact', FriendContact);
+  ```
+  
+## 89. Introducing "Props" (Parent => Child Communication)
+  - `props` define all available property name
+  - `props` by object
+  - validating props
+  
+  ```
+  export default {
+    //props: [
+    //  "name", // => name, this.name
+    //  "phoneNumber", // => phone-number, this.phoneNumber
+    //  "emailAddress" // => email-address, this.emailAddress
+    //]
+    
+    props: {
+      name: {
+        type: String,
+        required: true
+      },
+      phoneNumber: String,
+      emailAddress: String,
+      isFavorite: {
+        type: String,
+        required: false,
+        default: "0",
+        validator: function(value) {
+          return value === '0' || value === '1';
+        }
+      }
+    }
+  }
+  ```
+  
+## 90. Prop Behavior & Changing Props
+  - `prop` cannot be changed by component it self, and can only changed by parent component.
+  - instead, create a `internal data property` and initialize it with value of `prop`, then you can update it internaly
+
+## 94. Emitting Custom Events (Child => Parent Communication)
+  - `$emit('event-name')` from child component
+  - `$emit('event-name', this.id)` from child component to pass parameter
+  - `@event-name="<method>"` on parent component
+
+## 95. Defining & Validating Custom Events
+  ```
+    export default {
+    
+      props: {
+        // ...
+      }
+
+      // emits: ['toogle-item'] // defining without validating
+      emits: { // defining with validating
+        'toogle-item': function(id) { // defining
+          // validating
+          if (id) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+      }
+    }
+  ```
+  
+  ## 96. Prop / Event Fallthrough & Binding All Props
+  - `Prop / Event Fallthrough`: Props and events added on a custom component tag automatically fall through to the root component in the template of that component. You can get access to these fallthrough props on a built-in `$attrs` property (e.g. `this.$attrs`)
+  - `Binding All Props`: With `v-bind="person"` you pass all key-value pairs inside of `person` as `props` to the component
+    
+## 99. A Potential Problem
+  - `Prop / Event Fallthrough` might be unuseful when you have to pass prop/event via multiple layer of component: com1 > com2 > com3 > com4
+    
+## 100. Provide + Inject To The Rescue
+  - `provide` property of data object in `script` section of parent component
+  ```
+  <script>
+  export default {
+    // provide object directly
+    //provide: {
+    //  topics: {
+    //    {...},
+    //    {...}
+    //  }
+    //}
+    
+    // provide component property
+    data() {
+      return {
+        topics: {
+          // ...
+        ]
+      }
+    },
+    
+    methods: {
+      activateTopic(topicId) {
+        // ...
+      }
+    }
+    
+    provide() {
+      return {
+        topics: this.topics             // provide value
+        selectTopic: this.activateTopic // provide callback
+      }
+    }
+  }
+  </script>
+  ```
+  - `inject` property inside any child component
+  ```
+  <script>
+  export default {
+    inject: ['topics', 'selectTopic']
+  }
+  </script>
+  ```
