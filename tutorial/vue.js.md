@@ -303,3 +303,73 @@ watch {
   }
   </script>
   ```
+
+## 107. Global vs Local Components
+  - register all component as global is not good.
+  - register component locally
+
+## 108. Scoped Styles
+```
+<style scoped>
+...
+</style>
+```
+
+## 109. Introducing Slots
+  - same as ReactJS `props.children`: `<slot></slot>`
+  - named slot: using `<slot name="abc"></slot>` for implement multiple `slot` on component. Setup template for named slot (on the place that using component): `<template v-slot:abc>...</template>` or `<template #abc>...</template>`
+  - `<style>` not affect on `template` element, all `style` for `slot` should be put on component contains `slot` tag
+  - default content for `slot`
+  - check if named slot exist
+  ```
+  <header v-if="$slots.header">
+    <slot name="header>
+    ...
+    </slot>
+  </header>
+  ```
+  - Scoped slot: passing data from component defining `slot` (containing `slot`) to component that using the `slot` (component passing markup to `slot`
+  ```
+  // component define slot
+  <slot v-bind:item="goal"></slot>
+  // or short-hand
+  <slot :item="goal" another-prop="..."></slot>
+  
+  // the component that passing markup to slot
+  <course-goals>
+    <template #default="slotProps"> // 'slotProps' contains all properties of slot above
+      <h2>{{ slotProps.item }}</h2>
+      <p>{{ slotProps['another-prop'] }}</p> // props name NOT automatically convert to 'anotherProp'
+    </template>
+  </course-goals>
+  ```
+  - For single slot, using this short-hand
+  ```
+  <course-goals #default="slotProps">
+    ...
+  </course-goals>
+  ```
+  
+  ## 114. Dynamic Components
+  - `<component></component>` tag
+    ```
+    <component v-bind:is="selectedComponent"></component> // bind component name as 'selectedComponent' property
+    <component :is="selectedComponent"></component> // short-hand
+    ```
+  - using `<keep-alive></keep-alive>` for making dynamic component alive when switching component
+
+## 117. Teleporting Elements
+  - same as portal feature of ReactJS
+  - `<teleport></teleport>` tag
+  ```
+  <teleport to="body"> // teleport by css selector
+    ...
+  </template>
+  ```
+  
+## 118. Working with Fragments
+  - multiple root element is ok on VueJS v3 thanks to Fragments feature (Not work on VueJS v2)
+  
+## 120. Moving to a Different Folder Structure
+  - Better project structure
+  
