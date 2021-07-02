@@ -259,6 +259,7 @@ watch {
   - `Prop / Event Fallthrough` might be unuseful when you have to pass prop/event via multiple layer of component: com1 > com2 > com3 > com4
     
 ## 100. Provide + Inject To The Rescue
+  - `provide` NOT WORK incase that assigning property to a new one (`this.arrayProperty = this.arrayProperty.filter(...)`) so, instead, try to modify the property.
   - `provide` property of data object in `script` section of parent component
   ```
   <script>
