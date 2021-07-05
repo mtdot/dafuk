@@ -384,3 +384,6 @@ watch {
   - `checkbox`: property contains checkbox data should be array
   - SINGLE `checkbox`: property can be `true`/`false` and without `value` property on checkbox HTML tag.
   - using `@blur` built-in event to validate data on lost focus, combining with binding class `:class="{invalid: inputValid === 'invalid'}"`
+
+## 144. Using v-model on Custom Components
+  - using `v-model` (or using `:model-value="property_name"` and `@update:modelValue="function_name"`) on custom components by using `props: ['modelValue']` and `emits: ['update:modelValue']`
