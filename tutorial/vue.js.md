@@ -374,3 +374,13 @@ watch {
 ## 120. Moving to a Different Folder Structure
   - Better project structure
   
+## 139. Working with v-model Modifiers and Numbers
+  - `v-model.trim`: trim text before passing to property
+  - `v-model.numer`: convert to number before passing to property
+
+## 141. Using v-model with Checkboxes & Radiobuttons
+  - Common: need to set same `v-model:property` to all checkbox & radiobutton on group
+  - Common: need to set different `value="value_name"` to each available value on Checkbox & RadioButton group
+  - `checkbox`: property contains checkbox data should be array
+  - SINGLE `checkbox`: property can be `true`/`false` and without `value` property on checkbox HTML tag.
+  - using `@blur` built-in event to validate data on lost focus, combining with binding class `:class="{invalid: inputValid === 'invalid'}"`
