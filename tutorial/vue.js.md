@@ -57,7 +57,7 @@ Vue.createApp({
 
 ## 14. `Performance` Interpolation and Data Binding
   - Interpolation syntax `{{ varName }}` accept data-binding of a `html tag inner HTML` to property name of Vue's data object.
-  - Interpolation syntax `{{ doSomething() }}` for evaluating method: This should be avoid, because `doSomething()` alway be executed when anything on the page changed.
+  - Interpolation syntax `{{ doSomething() }}` for evaluating method: This should be avoid, because `doSomething()` as `methods` alway be executed when anything on the page changed.
   ```html
   <p>{{ title }}</p>
   ```
@@ -387,3 +387,10 @@ watch {
 
 ## 144. Using v-model on Custom Components
   - using `v-model` (or using `:model-value="property_name"` and `@update:modelValue="function_name"`) on custom components by using `props: ['modelValue']` and `emits: ['update:modelValue']`
+
+## 154. Getting Data (GET Request) & Transforming Response Data
+  - Using `fetch` should chain the promise with arrow function to avoid error related to `this.property`
+  - When using `fetch` to POST, PUT, GET, DELETE, we should validate the response status code via `response.ok`
+
+## 155. Loading Data When a Component Mounts
+  - 
