@@ -393,4 +393,51 @@ watch {
   - When using `fetch` to POST, PUT, GET, DELETE, we should validate the response status code via `response.ok`
 
 ## 155. Loading Data When a Component Mounts
-  - 
+  - `mouted()` lifecycle
+
+## 165. Registering & Rendering Routes
+  - register via `createRouter`, `createWebHistory` hook from `vue-router` package
+  - Using `<router-view>` tag to render component
+  - Using `<router-link to="/teams">` to navigate between paths
+  - styling using class name `router-link-active` & `router-link-exact-active`: for example: https://host/teams (match by both) & https://host/teams/team1 (match by `router-link-active`)
+  - class name can be overwite with othername by settings attribute `linkActiveClass="active"` & `linkExactActiveClass="exact-active"`
+```
+import { createApp } from 'vue';
+import { createRouter, createWebHistory } from 'vue-router';
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    {
+      path: '/teams',
+      component: TeamList
+    },
+    { path: '/users', component: UserList }
+  ]
+});
+const app = createApp(App);
+app.use(router);
+```
+
+## 168. Programmatic Navigation
+```
+this.$router.push('/teams');
+this.$router.back();
+this.$router.forward();
+```
+
+## 169. Passing Data with Route Params (Dynamic Segments)
+```
+// register path
+{ path: '/teams/:teamId', component: TeamMembers }
+
+// access parameter
+this.$route.params.teamId
+```
+
+## 170. Navigation & Dynamic Paths
+  - dynamic link using `<router-link :to="`/teams/${id}`">` or `computed` method return the link
+
+## 172. `Bug` Updating Params Data with Watchers
+  - Knowing the issue while using link `/teams/t2` on page `https://host/team/t1` (will not work because of dynamic link matcher)
+  - Knowing the workaround for this issue by adding watcher for `$router`
