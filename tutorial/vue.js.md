@@ -441,3 +441,42 @@ this.$route.params.teamId
 ## 172. `Bug` Updating Params Data with Watchers
   - Knowing the issue while using link `/teams/t2` on page `https://host/team/t1` (will not work because of dynamic link matcher)
   - Knowing the workaround for this issue by adding watcher for `$router`
+
+## 173. Passing Params as Props
+  - Passing dynamic route to props of component by using `props: true` in path definition
+
+## 174. Redirecting & "Catch All" Routes
+  - using `redirect: '<other_path>'` to redirect path to other path (with changing URL to target URL)
+  - using `alias: '<other_path>'` to define alternative path to reach component (keeping URL as alias)
+  - Catch all other router using
+  ```
+  { path: '/:notFound(.*)', redirect: '/teams' }
+  ```
+  
+  - Using nested router with `chilrden` property and adding `<router-view></router-view>` to parent component
+  - Assigning `name` to path, passing parameters to `path` object
+  ```
+  // assign name
+  { name:'team-members', path: ':teamId', component: TeamMembers, props: true },
+  
+  // using path by name with passing parameters
+  <router-link :to="{ name: 'team-members', params: { teamId: id } }">
+    View Members
+  </router-link>
+  ```
+  - Passing queries
+  ```
+  <router-link :to="{ name: 'team-members', params: { teamId: id }, query: { sort: 'asc' } }">
+    View Members
+  </router-link>
+  ```
+  - Using `query` by `this.$route.query`
+
+## 178. Rendering Multiple Routes with Named Router Views
+  - named router view `<router-view name='footer'></router-view>`
+  - `router-view` without name equals to `<router-view name='default'></router-view>`
+  - Multiple components for path via `components: { default: TeamsList, footer: TeamsFooter }` (NOT `component`)
+  ```
+  { path: '/users', components: { default: UsersList, footer: UserFooter } },
+  ```
+  - Vuejs will render nothing for named `router-view` if we not pass anything for that named `router-view`
