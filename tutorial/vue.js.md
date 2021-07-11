@@ -655,3 +655,7 @@ export default {
 };
 </script>
   ```
+
+## 218. `Refactoring` Organizing your Store with Modules
+  - Seperate related part of main store into module
+  - Seperate module work as local module (CANNOT access `state`, `mutations`, `actions`, `getters` from Global store)
