@@ -418,6 +418,15 @@ const router = createRouter({
 const app = createApp(App);
 app.use(router);
 ```
+  - Modify scroll behavior
+```
+scrollBehavior(to, from, savePosition) {
+  if (savePosition) {
+    return savePosition;
+  }
+  return {top: 0, left: 0};
+}
+```
 
 ## 168. Programmatic Navigation
 ```
@@ -480,3 +489,169 @@ this.$route.params.teamId
   { path: '/users', components: { default: UsersList, footer: UserFooter } },
   ```
   - Vuejs will render nothing for named `router-view` if we not pass anything for that named `router-view`
+
+## 180. Introducing Navigation Guards
+  - Using `router.beforeEach(to, from, next)` for `Global Guard`
+  ```
+  router.beforeEach(to, from, next) {
+    if (someCondition) {
+      next(false);
+    }
+    // or next(true)
+    // or next('/users') => redirect
+    // or next({name: 'teams-members', params: { teamId: id }}) => redirect with named router
+    next(); 
+  }
+  ```
+  - Using `beforeEach(to, from, next)` on single path for `Route Config Level Guard`
+    ```
+    { 
+      path: '/users', 
+      components: { default: UsersList, footer: UserFooter },
+      beforeEach(to, from, next) {
+        // handle logic
+      }
+    },
+    ```
+  - Using `beforeRouteEnter(to, from, next)` hook on component for `Component Level Guard`
+  - The order: `Global Guard` >> `Route Config Level Guard` >> `Component Level Guard`
+  - `beforeRouteUpdate(to, from, next)` hook on component called when re-use the component with other `route` (or parameters)
+  - `router.afterEach(to, from)` called after each routing. for send analytics ...
+  - `beforeRouteLeave(to, from, next)` hook on component for `Making confirmation when leaving editting form ` (same as `Prompt` compoent on ReactJS)
+  ```
+  beforeRouteLeave(to, from, next) {
+    const userWantToLeave = confirm("Do you really want to leave?");
+    next(userWantToLeave);
+  }
+  ```
+  - Defining metadata for path
+  ```
+  { 
+    path: '/users', 
+    meta: { needAuth: true },
+    components: { default: UsersList, footer: UserFooter },
+    beforeEach(to, from, next) {
+      // handle logic
+      if (to.meta.needAuth) {
+        // redirect to auth page
+        next('/login');
+      }
+      next();
+    }
+  },
+  ```
+## 185. Organizing Route Files
+  - Seperate all router definition to `router.js` file
+
+## 209. Creating & Using a Store
+  - Why `Vuex`: replacing `provide`/`inject` mechanism
+  - Managing states like ReactJS
+
+## 211. `Bug` Introducing Mutations - A Better Way of Changing Data
+  - Synchronizing state mutations (prevent race conditions)
+  - Declaring & Using mutation methods
+  ```
+  const store = createStore({
+      state() {
+          return {
+              counter: 0
+          }
+      }, 
+      mutations: {
+          increment(state) {
+              // return {...state, counter: state.counter + 1}
+              state.counter = state.counter + 1;
+          },
+          increase(state, payload) {
+              state.counter = state.counter + payload.value;
+          }
+      }
+  });
+  
+  // using on component
+  export default {
+      methods: {
+          addOne() {
+              this.$store.commit('increment');
+              this.$store.commit('increase', { value: 10 });
+              this.$store.commit({
+                type: 'increase',
+                value: 10
+            });
+          }
+      }
+  }
+  ```
+## 213. Introducing Getters - A Better Way Of Getting Data
+  ```
+  getters: {
+      finalCounter(state) {
+          return state.counter * 2;
+      },
+      normalizedCounter(state, getters) {
+          const finalCounter = getters.finalCounter;
+          if (finalCounter > 100) {
+              return 100;
+          }
+          return finalCounter;
+      }
+  }
+  
+  // accessing on component
+  this.$store.getters.finalCounter;
+  this.$store.getters.normalizedCounter;
+  ```
+## 214. Running Async Code with Actions
+  - action should be same name with mutation method due to `component` -> `action` -> `mutation`
+  - action can dispatch other action via `context`
+  
+## 216. Using Mapper Helpers
+  - Automatically merge getters into `computed` sections by `mapGetters`
+  
+  ```
+  <template>
+    <h3>{{ counter }}</h3>
+  </template>
+
+  <script>
+  import { mapGetters } from 'vuex';
+
+  export default {
+    computed: {
+      // counter() {
+      //   return this.$store.getters.normalizedCounter;
+      // }
+      //...mapGetters() // map all
+      //...mapGetters([finalCounter]) // using default alias name
+      ...mapGetters({
+        counter: 'finalCounter' // with alias
+      })
+    }
+  };
+  </script>
+
+  ```
+  - Automatically merge actions into `methods` sections by `mapActions`
+  ```
+  <template>
+  <button @click="increment">Add 2</button>
+  <button @click="increase({ value: 4 })">Add 4</button>
+</template>
+
+<script>
+import { mapActions } from 'vuex';
+
+export default {
+  methods: {
+    // addOne() {
+    //     // this.$store.commit({
+    //     //     type: 'increase',
+    //     //     value: 10
+    //     // });
+    //     this.$store.dispatch('increment');
+    // }
+    ...mapActions(['increment', 'increase'])
+  }
+};
+</script>
+  ```
