@@ -659,3 +659,61 @@ export default {
 ## 218. `Refactoring` Organizing your Store with Modules
   - Seperate related part of main store into module
   - Seperate module work as local module (CANNOT access `state`, `mutations`, `actions`, `getters` from Global store)
+  - To access main state & getters
+  ```
+  getters: {
+    testAuth(state, getter, rootState, rootGetters) {
+      // should avoid?
+    }
+  }
+  ```
+
+## 220. Namespacing Modules
+  - Enable namespace for module by set `namespaced: true`
+  - Accessing via namespace via module key
+  ```
+  const counterModule = {
+    namespaced: true,
+    ...
+    getters: {
+      finalCounter(state) {
+        return state.counter * 2;
+      },
+    ...
+    }
+  }
+  
+  const store = createStore({
+    modules: {
+      numbers: counterModule
+    },
+    ...
+  }
+  
+  // accessing on component
+  this.$store.getters['numbers/finalCounter'];
+  
+  // or
+  ...mapGetters('numbers', ['finalCounter'])
+  
+  // dispatch
+  this.$store.dispatch('numbers/increase', { value: 10 });
+  
+  // or
+  this.$store.dispatch({
+    type: 'numbers/increase',
+    value: 10
+  });
+  ```
+## 221. `Refactoring` Structuring Vuex Code & Files  
+  - Seperate store related code to `store.js` file
+  - for large project, it might be seperate `mutations` to `mutation.js`, `actions` to `actions.js`, `getters` to `getters.js`, each module into seperate folder
+  
+## 275. `Optimization` Optimization: Using Asynchronous Components
+  - Use for components that might be never visit.
+  - NOT recommended to use async components for routing.
+  ```
+  import { defineAsyncComponent } from 'vue';
+  
+  const BaseDialog = defineAsyncComponent(() => import('./components/ui/BaseDialog.vue'));
+  ```
